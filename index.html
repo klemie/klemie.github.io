@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Static resume</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.scss">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>   
+    </head>
+    <body>
+        <Ion-app >
+            <Ion-content color="light">
+                <div slot="fixed">
+                <ion-grid >
+                    <ion-row >
+                        <ion-col>
+                            <ion-card color="light" outline="true"class="ion-padding-horizontal ion-padding-top" >
+                                <ion-avatar slot="start">
+                                    <img src="\assets\profile.JPG">
+                                </ion-avatar> 
+                                <ion-label>Kristopher <br>Lemieux</ion-label>
 
+                               </ion-card>
+                                <ion-card color="primary">
+                                 
+                                    <ion-card-content class="ion-margin-none">
+                                       321 Irving Road<br>
+                                       Victoria BC<br>
+                                       lemieuxkristopher@gmail.com<br>
+                                       (587)989-4812
+                                    </ion-card-content>
+                
+                                </ion-card>
+
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                        <ion-card color="dark">
+                            <ion-card-title class="ion-padding-horizontal ion-padding-top">
+                                <strong>References</strong>
+                            </ion-card-title>
+                          
+                            <ion-card-content class="ion-padding-horizontal ion-no-margin">
+                                <strong>Morgan Stuyt</strong><br>
+                                UVR Propulsion Lead<br>
+                                Victoria BC<br>
+                                (604)997-1436<br>
+                                stuytmorgan@gmail.com
+                            </ion-card-content> 
+                            <ion-card-content class="ion-padding-horizontal ion-no-margin">
+                                
+                                    <strong>
+                                    William Dunn<br>
+                                    </strong>
+                              
+                                    Contury Grocer<br> Grocery Supervsior<br>
+                                    Victoria BC<br>
+                                    williampdunn@gmail.com
+                                
+                            </ion-card-content>
+                            <ion-card-content class="ion-padding-horizontal ion-no-margin">
+                                <ion-text>
+                                    <strong>Mitchell Stevens</strong><br>
+                                    Island Temperture Controls<br> ___<br>
+                                    Victoria BC<br>
+                                    mitchell@islandtemp.com
+                                </ion-text>
+                    
+                            </ion-card-content>
+                        </ion-card>
+                        </ion-col>
+                    </ion-row>
+
+                    </ion-grid>
+                </div>
+                <div style="margin-left: 250px">
+                <ion-grid>
+                   
+                    <ion-row>
+                        <ion-col>
+                            <ion-card color="dark" onclick="toggleCard('edu')">
+                                <ion-card-title class="ion-padding">
+                                    Education
+                                </ion-card-title>
+                            </ion-card>
+                            
+                            <ion-card id="edu" class="ion-hide" color="light">
+                                <ion-card-content>
+                                    <div style="width:50%; float: left;">
+                                        <img src="\assets\UVic-Logo.png">
+                                    </div>
+                                    <div class="ion-text-justify" style="width:50%; float:right;">
+                                        <ion-text>
+                                            Computer Engineering (BEng)
+                                        </ion-text>
+                                        <br>
+                                        <ion-text>
+                                            Second year
+                                        </ion-text>
+                                        <br>
+                                            Univserity of Victoria, Victoria BC
+                                            <br>
+                                            Sept 2019 - Present
+                                    </div>
+                                   
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                                               
+                    </ion-row>
+                    <ion-row >
+                        <ion-col>
+                            <ion-card color="dark" onClick="toggleCard('TechSkills')">
+                                <ion-card-title class="ion-padding">
+                                    Technical Skills
+                                </ion-card-title>
+                                    
+                                </ion-card>
+
+                            <ion-card id ="TechSkills" class="ion-hide" color="light">
+                                <ion-card-content>
+                                    <!-- logos -->
+                                    <div style="width:25%; float: left;">
+                                        <ion-avatar><img src="\assets\c++-logo.png"></ion-avatar>
+                                        <ion-avatar><img src="\assets\githublogo.png"></ion-avatar>
+                                        <ion-avatar><img src="\assets\node-js.png"></ion-avatar>
+                                        <ion-avatar><img src="assets\react-logo.jpg"></ion-avatar>
+                                        <ion-avatar><img src="assets\python-logo.jpg"></ion-avatar>
+                                        <ion-avatar><img src="\assets\qt-logo.png"></ion-avatar>
+
+                                    </div>
+                                    <div class="ion-text-justify" style="width:50%; float:right;">
+                                        <ion-text>
+                                           
+                                        </ion-text>
+                                        <br>
+                                        <ion-text>
+                                          
+                                        </ion-text>
+                                        <br>
+                                           
+                                    </div>
+                                   
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-card color="dark" onClick="toggleCard('proj')">
+                                <ion-card-title class="ion-padding">
+                                    Projects
+                                </ion-card-title>
+
+                            </ion-card>
+                            <div id="proj" class="ion-hide">
+                            <ion-card  color="light" >
+                                <ion-card-title class="ion-padding">
+                                    Controls System Redesign
+                                </ion-card-title>
+                                <ion-card-content>
+                                    
+                                
+                                </ion-card-content>
+                            </ion-card>
+                            <ion-card  color="light" >
+                                <ion-card-title class="ion-padding">
+                                    Rocketry Managment App
+                                </ion-card-title>
+                                <ion-card-content>
+                                    
+                                
+                                </ion-card-content>
+                            </ion-card>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-card color="dark" onClick="toggleCard('comp')">
+                                <ion-card-title class="ion-padding">
+                                    Competencies
+                                </ion-card-title>
+    
+                            </ion-card>
+                            <ion-card id="comp" color="light" class="ion-hide">
+                            
+                                <ion-card-content>
+                                    
+                                
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                        
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-card color="dark" onClick="toggleCard('exper')">
+                                <ion-card-title class="ion-padding">
+                                    Experience
+                                </ion-card-title>
+            
+                            </ion-card>
+                            <div id="exper" class="ion-hide">
+                            <ion-card  color="light">
+                                <ion-card-title class="ion-padding">
+                                    Contury Grocer
+                                </ion-card-title>
+            
+                            </ion-card>
+                            <ion-card  color="light">
+                                <ion-card-title class="ion-padding">
+                                    Island Temperature Controls
+                                </ion-card-title>
+            
+                            </ion-card>
+                            <ion-card  color="light" >
+                                <ion-card-title class="ion-padding">
+                                    The Works
+                                </ion-card-title>
+            
+                            </ion-card>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                </div>
+            </Ion-content>
+        </Ion-app>
+        <script src="resume.js" async defer></script>
+    </body>
+</html>
