@@ -13,7 +13,7 @@
     </head>
     <body>
         <Ion-app >
-            <Ion-content color="light">
+            <Ion-content id="app" color="light">
                 <div id="profile_reference"  class="ion-float-md-left">
                 <ion-grid >
                     <ion-row >
@@ -41,14 +41,13 @@
                                         </ion-row>
                                         <ion-row>
                                             <ion-col class="center">
-                                                <div style="width: 250px">
+                                                <div style="width: 245px">
                                                     <ion-chip>
                                                     <ion-icon name="ios-pin" color="dark">
             
                                                     </ion-icon>
                                                     <ion-label>
-                                                       321 Irving Road,
-                                                        Victoria BC 
+                                                       321 Irving Road, Victoria BC  
                                                     </ion-label>
                                                     
                                                 </ion-chip>
@@ -57,7 +56,7 @@
                                         </ion-row>
                                         <ion-row>
                                             <ion-col class="center">
-                                                <div style="width: 250px">
+                                                <div style="width: 245px">
                                     <ion-chip>
                                         <ion-icon name="md-mail" color="dark">
 
@@ -72,7 +71,7 @@
                                     </ion-row>
                                     <ion-row>
                                         <ion-col class="center">
-                                            <div style="width: 250px" >
+                                            <div style="width: 245px" >
                                     <ion-chip>
                                         <ion-icon name="md-call" color="dark">
 
@@ -82,56 +81,74 @@
                                         </ion-label>
                                         
                                     </ion-chip>
+                                    <ion-chip class="ion-float-right">    
+                                        <!-- <ion-label>
+                                            
+                                        </ion-label>   -->
+                                        <ion-toggle id="themeToggle" color="dark"></ion-toggle>                              
+                                        <!-- <ion-icon  name="contrast-outline" color="dark"></ion-icon> -->
+                                        <!-- <ion-label>
+                                            
+                                        </ion-label> -->
+                                    </ion-chip>
                                     </div>
                                     </ion-col>
                                     </ion-row>
+                                    <ion-card color="light" onClick="toggleCard('ref')">
+                                        <ion-card-title class="ion-padding">
+                                            References
+                                            <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                            
+                                            
+                                        </ion-card-title>
+                                        
+                                    </ion-card>  
+                                    <ion-card color="light" id="ref" class="ion-hide">
+                                        
+                                        <ion-card-content color="light">
+                                            <ion-list color="light">
+                                                
+                                                <ion-item color="light" class="center" >
+                                                    <ion-label >
+                                                        <div >
+                                                            <strong>Morgan Stuyt</strong><br>
+                                                            UVR Propulsion Lead<br>
+                                                            Victoria BC<br>
+                                                            (604)997-1436<br>
+                                                            stuytmorgan@gmail.com
+                                                        </div>
+                                                    </ion-label>
+                                                </ion-item>
+                                                
+                                                
+                                                <ion-item color="light">
+                                                    <ion-label>
+                                                        <strong>
+                                                            William Dunn<br>
+                                                        </strong>
+                                                        
+                                                        Contury Grocer<br> Grocery Supervsior<br>
+                                                        Victoria BC<br>
+                                                        williampdunn@gmail.com
+                                                    </ion-label>
+                                                </ion-item>
+                                                
+                                                
+                                                <ion-item color="light">
+                                                    <ion-label>
+                                                        <strong>Mitchell Stevens</strong><br>
+                                                        Island Temperture Controls<br> (250)899-1484<br>
+                                                        Victoria BC<br>
+                                                        mitchell@islandtemp.com
+                                                    </ion-label>
+                                                </ion-item>
+                                            </ion-list>
+                                        </ion-card-content>
+                                    </ion-card>
                                 </ion-card>
-                        <!-- <ion-card color="light">
+                                </ion-col>
+                            </ion-row>
                             
-                        </ion-card>   -->
-                        <ion-card color="light">
-                            <ion-card-title class="ion-padding-horizontal ion-padding-top">
-                                References
-                            </ion-card-title>
-                          
-                            <ion-card-content class="ion-padding-horizontal ion-no-margin">
-                                <ion-text>
-                                <strong>Morgan Stuyt</strong><br>
-                                UVR Propulsion Lead<br>
-                                Victoria BC<br>
-                                (604)997-1436<br>
-                                stuytmorgan@gmail.com
-                                </ion-text>
-                            </ion-card-content> 
-                            <ion-card-content class="ion-padding-horizontal ion-no-margin" style="display: flex;
-                            align-items: center;
-                            justify-content: center;">
-                                <ion-text>
-                                    <strong>
-                                    William Dunn<br>
-                                    </strong>
-                              
-                                    Contury Grocer<br> Grocery Supervsior<br>
-                                    Victoria BC<br>
-                                    williampdunn@gmail.com
-                                    </ion-text>
-                                
-                            </ion-card-content>
-                            <ion-card-content class="ion-padding-horizontal ion-no-margin" style="display: flex;
-                            align-items: center;
-                            justify-content: center;">
-                                <ion-text>
-                                    <strong>Mitchell Stevens</strong><br>
-                                    Island Temperture Controls<br> (250)899-1484<br>
-                                    Victoria BC<br>
-                                    mitchell@islandtemp.com
-                                </ion-text>
-                    
-                            </ion-card-content>
-                        </ion-card>
-                        </ion-col>
-                    </ion-row>
-
                     </ion-grid>
                 </div>
                 <div id="mainContent" >
@@ -142,7 +159,10 @@
                             <ion-card color="dark" onclick="toggleCard('edu')">
                                 <ion-card-title class="ion-padding">
                                     Education
+                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+
                                 </ion-card-title>
+
                             </ion-card>
                             
                             <ion-card id="edu" class="ion-hide" color="light">
@@ -181,6 +201,8 @@
                             <ion-card color="dark" onClick="toggleCard('TechSkills')">
                                 <ion-card-title class="ion-padding">
                                     Technical Skills
+                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+
                                 </ion-card-title>
                                     
                                 </ion-card>
@@ -218,6 +240,8 @@
                             <ion-card color="dark" onClick="toggleCard('proj')">
                                 <ion-card-title class="ion-padding">
                                     Projects
+                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+
                                 </ion-card-title>
 
                             </ion-card>
@@ -248,6 +272,8 @@
                             <ion-card color="dark" onClick="toggleCard('comp')">
                                 <ion-card-title class="ion-padding">
                                     Competencies
+                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+
                                 </ion-card-title>
     
                             </ion-card>
@@ -273,6 +299,8 @@
                             <ion-card color="dark" onClick="toggleCard('exper')">
                                 <ion-card-title class="ion-padding">
                                     Experience
+                                                                        <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+
                                 </ion-card-title>
             
                             </ion-card>
