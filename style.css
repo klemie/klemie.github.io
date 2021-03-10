@@ -1,0 +1,30 @@
+#profile_reference{
+    position:fixed;
+}
+#mainContent{
+    margin-left: 330px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#avatar{
+    float:right;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media  only screen and (max-width: 620px){
+    #profile_reference{
+        position:static;
+    }
+    #mainContent{
+        margin-left: 0px;
+    }
+    #avatar{
+        float:right;
+        margin-right: 15px;
+    }
+}
