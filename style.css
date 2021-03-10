@@ -2,7 +2,6 @@
 
 :root{
     --ion-background-color: light;
-    color-scheme: light dark;
 }
 
 #profile_reference{
@@ -17,6 +16,9 @@
     align-items: center;
     justify-content: center;
     
+}
+.referenee{
+    font-size: 14px;
 }
 #avatar{
     float:right;
