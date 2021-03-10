@@ -11,10 +11,37 @@
 }
 #avatar{
     float:right;
-    margin-right: 15px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#studentinfo{
+    font-size: 20px;
+    width: 300px;
+    margin:auto;
+}
+/* student info font size */
+@media  only screen and (max-width: 1120px){
+    #studentinfo{
+        font-size: 16px;
+        width: 250px;
+        margin:auto;
+    }
+}
+@media  only screen and (max-width: 900px){
+    #studentinfo{
+        font-size: 14px;
+        width: 220px;
+        margin:auto;
+    }
+}
+@media  only screen and (max-width: 780px){
+    #studentinfo{
+        font-size: 19px;
+        width: 300px;
+        margin:auto;
+    }
 }
 @media  only screen and (max-width: 620px){
     #profile_reference{
