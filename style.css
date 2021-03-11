@@ -33,6 +33,21 @@
     width: 300px;
     margin:auto;
 }
+/* scroll */
+.scrollcontainer{
+    width: 100%;
+    background-color: green;
+    overflow: hidden; 
+    white-space: nowrap;
+    /* ::-webkit-scrollbar {
+        display: none;
+    } */
+  
+    .scroll {
+        overflow: auto;
+    }
+}
+
 /* student info font size */
 @media  only screen and (max-width: 1120px){
     #studentinfo{
