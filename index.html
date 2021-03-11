@@ -92,11 +92,12 @@
                                     </div>
                                     </ion-col>
                                     </ion-row>
-                                    <ion-card color="light" onClick="toggleCard('ref')">
+                                    <ion-card color="light" onClick="toggleCard('ref','refDown','refUp')">
                                         <ion-card-title class="ion-padding">
                                             References
-                                            <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
-                                            
+                                            <ion-icon id="refDown" class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                            <ion-icon id ="refUp" class="ion-float-right ion-hide" name="chevron-up-outline"></ion-icon>
+
                                             
                                         </ion-card-title>
                                         
@@ -161,10 +162,11 @@
                    
                     <ion-row>
                         <ion-col>
-                            <ion-card color="dark" onclick="toggleCard('edu')">
+                            <ion-card color="dark" onclick="toggleCard('edu','eduUp','eduDown')">
                                 <ion-card-title class="ion-padding">
                                     Education
-                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id="eduDown" class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id ="eduUp" class="ion-float-right ion-hide" name="chevron-up-outline"></ion-icon>
 
                                 </ion-card-title>
 
@@ -203,10 +205,11 @@
                     </ion-row>
                     <ion-row >
                         <ion-col>
-                            <ion-card color="dark" onClick="toggleCard('TechSkills')">
+                            <ion-card color="dark" onClick="toggleCard('TechSkills','tsDown','tsUp')">
                                 <ion-card-title class="ion-padding">
                                     Technical Skills
-                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id="tsDown" class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id ="tsUp" class="ion-float-right ion-hide" name="chevron-up-outline"></ion-icon>
 
                                 </ion-card-title>
                                     
@@ -261,16 +264,63 @@
                                                 </ion-card>
                                             </ion-col>
                                         </ion-row>
+                                        <ion-row>
+                                            <ion-col>
+                                                <ion-card color="light">
+                                                    <ion-card-content>
+                                                        <ion-chip class="center">
+                                                            <ion-icon name="logo-ionic" color="dark"></ion-icon>
+                    
+                                                            <ion-label>
+                                                               Ionic  
+                                                            </ion-label>
+                                                            
+                                                        </ion-chip>
+                                                </ion-card-content>
+                                                </ion-card>
+                                            </ion-col>
+                                            <ion-col>
+                                                <ion-card color="light">
+                                                    <ion-card-content>
+                                                        <ion-chip class="center">
+                                                            <ion-icon name="logo-react" color="dark">
+                    
+                                                            </ion-icon>
+                                                            <ion-label>
+                                                               React JS  
+                                                            </ion-label>
+                                                            
+                                                        </ion-chip>
+                                                </ion-card-content>
+                                                </ion-card>
+                                            </ion-col>
+                                            <ion-col>
+                                                <ion-card color="light">
+                                                    <ion-card-content>
+                                                        <ion-chip class="center">
+                                                            <ion-icon name="logo-nodejs" color="dark">
+                    
+                                                            </ion-icon>
+                                                            <ion-label>
+                                                               Node JS  
+                                                            </ion-label>
+                                                            
+                                                        </ion-chip>
+                                                </ion-card-content>
+                                                </ion-card>
+                                            </ion-col>
+                                        </ion-row>
                                     </ion-grid>
                             
                         </ion-col>
                     </ion-row>
                     <ion-row>
                         <ion-col>
-                            <ion-card color="dark" onClick="toggleCard('proj')">
+                            <ion-card color="dark" onClick="toggleCard('proj','projUp','projDown')">
                                 <ion-card-title class="ion-padding">
                                     Projects
-                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id="projDown" class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id ="projUp" class="ion-float-right ion-hide" name="chevron-up-outline"></ion-icon>
 
                                 </ion-card-title>
 
@@ -299,10 +349,11 @@
                     </ion-row>
                     <ion-row>
                         <ion-col>
-                            <ion-card color="dark" onClick="toggleCard('comp')">
+                            <ion-card color="dark" onClick="toggleCard('comp','compUp','compDown')">
                                 <ion-card-title class="ion-padding">
                                     Competencies
-                                    <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id ="compDown" class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id ="compUp" class="ion-float-right ion-hide" name="chevron-up-outline"></ion-icon>
 
                                 </ion-card-title>
     
@@ -326,10 +377,11 @@
                     </ion-row>
                     <ion-row>
                         <ion-col>
-                            <ion-card color="dark" onClick="toggleCard('exper')">
+                            <ion-card color="dark" onClick="toggleCard('exper','expUp','expDown')">
                                 <ion-card-title class="ion-padding">
                                     Experience
-                                                                        <ion-icon class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                        <ion-icon id ="expDown" class="ion-float-right" name="chevron-down-outline"></ion-icon>
+                                        <ion-icon id ="expUp" class="ion-float-right ion-hide" name="chevron-up-outline"></ion-icon>
 
                                 </ion-card-title>
             

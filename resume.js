@@ -1,6 +1,11 @@
-function toggleCard(id){
+function toggleCard(id, u,d){
     const card = document.getElementById(id);
+    const up = document.getElementById(u);
+    const down = document.getElementById(d);
     card.classList.toggle("ion-hide");
+    up.classList.toggle("ion-hide");
+    down.classList.toggle("ion-hide");
+
 }
 function contrasttoggle(){
     const app = document.querySelector('body');
