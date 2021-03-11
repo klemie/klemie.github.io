@@ -21,7 +21,7 @@ const av = document.getElementById("avcon");
 if(x.matches){
     av.classList.toggle("center");
 }
-
+const myCustomIcon = "assets/uvr-logo.svg";
 //theme toggle
 
 // Use matchMedia to check the user preference
