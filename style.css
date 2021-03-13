@@ -20,6 +20,9 @@
 .referenee{
     font-size: 14px;
 }
+#ref{
+    display:flex;
+}
 #avatar{
     float:right;
     margin-right: 20px;
