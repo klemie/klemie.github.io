@@ -6,6 +6,8 @@
 
 #profile_reference{
     position:fixed;
+    display: flex;
+    align-items: stretch;
 }
 #mainContent{
     margin-left: 330px;
