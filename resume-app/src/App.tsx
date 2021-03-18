@@ -29,7 +29,7 @@ import Education from './components/Education'
 const App: React.FC = () => {
 // Logical functions 
   const educationButtonRef = useRef<HTMLIonButtonElement>(null);
-  const educationContentRef = useRef<HTMLIonContentElement>(null)
+  // const [] = useState<>();
   //Front end UI
 return(
 
@@ -44,12 +44,12 @@ return(
           <IonRow>
             <IonCol>
             {/* Education */}
-             <IonButton onClick={()=>{educationContentRef.current?.setAttribute("hidden","true")}} expand="block" size="large" color="light">
+             <IonButton  expand="block" size="large" color="light">
                 <IonText>Education</IonText>
                 <IonIcon slot="end" id="eduDown" class="ion-float-right" icon={chevronDownOutline}></IonIcon>
              </IonButton>
                 {/* Show Imported Education module if button is triggered  */}
-                <Education ref={educationContentRef} />
+                <Education />
             </IonCol>
           </IonRow>
           <IonRow>
