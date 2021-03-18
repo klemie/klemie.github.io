@@ -1,7 +1,6 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import React, { useRef, useState} from 'react';
+import { IonApp, IonButton, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonIcon, IonRow, IonText, IonTitle} from '@ionic/react';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -18,23 +17,81 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+// Icons if needed
+import { chevronDownOutline } from 'ionicons/icons'
 
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+/* Component Imports */
+import Education from './components/Education'
+
+const App: React.FC = () => {
+// Logical functions 
+
+//Front end UI
+return(
+
+  <React.Fragment> 
+    <IonApp >
+      <IonContent color="dark">
+        {/* Profile and References*/}
+
+        {/* Main Content */}
+        {/* Grid organization */}
+        <IonGrid>
+          <IonRow>
+            <IonCol>
+            {/* Education */}
+             <IonButton expand="block" size="large" color="light">
+                <IonText>Education</IonText>
+                <IonIcon slot="end" id="eduDown" class="ion-float-right" icon={chevronDownOutline}></IonIcon>
+             </IonButton>
+                {/* Show Imported Education module if button is triggered  */}
+                <Education />
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+            {/* Technical Skills */}
+             <IonButton expand="block" size="large" color="light">
+                <IonText>Technical Skills</IonText>
+                <IonIcon slot="end" id="eduDown" class="ion-float-right" icon={chevronDownOutline}></IonIcon>
+             </IonButton>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              {/* Projects */}
+              <IonButton expand="block" size="large" color="light">
+                <IonText>Projects</IonText>
+                <IonIcon slot="end" id="eduDown" class="ion-float-right" icon={chevronDownOutline}></IonIcon>
+              </IonButton>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              {/* Competencies */}
+              <IonButton expand="block" size="large" color="light">
+                <IonText>Competencies</IonText>
+                <IonIcon slot="end" id="eduDown" class="ion-float-right" icon={chevronDownOutline}></IonIcon>
+              </IonButton>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              {/* Experience */}
+              <IonButton expand="block" size="large" color="light">
+                <IonText>Experience</IonText>
+                <IonIcon slot="end" id="eduDown" class="ion-float-right" icon={chevronDownOutline}></IonIcon>
+              </IonButton>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+      </IonContent>
+    </IonApp>
+  </React.Fragment>
+  );
+};
 
 export default App;
