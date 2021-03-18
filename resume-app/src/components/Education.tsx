@@ -17,7 +17,7 @@ const Education: React.FC = () => {
                        <IonCol>
                             <IonContent>
                                 <IonThumbnail>
-                                    <IonImg src="\public\assets\UVic-Logo.png" />
+                                    <IonImg src="/public/assets/UVic-Logo.png" />
 
                                    
                                 </IonThumbnail>
